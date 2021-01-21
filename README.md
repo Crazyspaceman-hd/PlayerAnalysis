@@ -1,2 +1,23 @@
-# pandas-challenge
-Pandas Bootcamp Homework
+# Heroes of Pymoli
+
+## Code function
+----
+First the notebook imports Pandas, assigns the file to be loaded to a variable and then calls that variable to load it into a data frame. It then reads the number of unique screen names to determine the total number of players that have purchased items in game. Next the notebook counts unique item ids to determine the number of different items, before using the total number of items purchased and the total amount spent on all purchases to determine the average amount spent on each item. These numbers are then outputted in a data frame.
+
+To determine the gender demogrpahics the notebook splits the data into 3 seperate sections deliniated by the genders provided by users. It then counts the number of unique screen names in these sections and adds them to a data frame, this data frame also includes the percentage of total players each gender represents which is calculated using the player total acquired in the previous section. The index of this data frame is then changed to the gender options and formatting is applied to the percentage column before the data frame is finally output.
+
+Purchase analysis along gender lines revisits the seperated data this time using each data frame to get total purchase counts, the total spent and average spent per item. These values are then used to construct a new data frame indexed by the provided gender options. The correct formatting is then applied to all columns and the data frame is then output.
+
+The binning method is then used to seperate the full data set into age ranges. The notebook then removes duplicate screen names before grouping the age ranges together and using that information to output to a new summary data frame. The `.count` function is used to determine the number of players in each age group and is utilized again to calculate the percentage of players in each age range. Once again formatting is applied to the percentage column and the data frame is output.
+
+The purchase analysis by age re-calls the data before sending it through the binning method again, this time the duplicate screen names are not removed. A summary dta frame is created using the `.count` `.mean` and `.sum` functions to determine the purchase count, the average purchase price and the total purchase value. The average total purchase per person is then calculated using the values from the total purchase value and the player counts from the previous section. Formatting is then applied to all columns containing currency values and the data frame is then output.
+
+To determine the top spenders the original data is first grouped by __Screen Name__. Then the `.sum` function is used to calculate the total number of purchases made by each screen name and the `.count` function is used to find the total value of purchases made each screen name. These two sets of data are then sorted in descending order before being merged on the screen name. The columns are then renamed to reflect their content and the average amount spent on each item is calculated using the Purchase Count and Total Purchase Value. The columns are then rearranged for clarity before the data frame is outputted with the top 5 values.
+
+To determine the most popular items the data is first grouped by the __Item ID__ and __Item Name__. Then the `.count` and `.sum` functions are used to determine the total number of each item sold and the total amount spent on each different item. The information from the `.count` function is then added as a column to the information from the`.sum` function and superfluous columns are removed. The __Item Price__ column is then added and calculated from the __Purhase Count__ and __Total Purchase Value__ columns. Before the columns are formatted a seperate copy of this data frame is saved for used in the next section. The items are then sorted by __Purchase Count__ in descending order and proper formatting is applied to the currency values. The columns are then rearranged for clarity before the data frame is outputted with the top 5 values.
+
+To determine the most profitable items the non-formatted copy of the data from the previous section is called, this data has already been sorted by __Total Purchase Value__ and so all that is needed is formatting, column rearrangement and finally output.
+
+## Analysis
+___
+By analyzing this data we can determine a few interesting trends. The player base for this game skews overwhelmingly male and early 20s, however the non- male players tend to spend significantly more. The top spendrs in terms of age ranges are the 35-39 year olds reaching almost $5 per player which is then followed by the lowest average per player with the 40+ range spending over $1.50 less per player than the 35-39 year olds. The player base does not seem to be buying that much per player with the purchase count of the top player being only 5 items and the purchase count dropping to 3 before leaving the top 5 spenders. Comparing the total number of purchases (780) to the number of players (576) indicates that most players only purchase a single item.
