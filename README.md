@@ -1,7 +1,15 @@
 # Heroes of Pymoli
 
+## Analysis
+
+By analyzing this data we can determine a few interesting trends. The player base for this game skews overwhelmingly male and early 20s, however non-male players tend to spend significantly more. The top spenders in terms of age ranges are the 35-39 year olds reaching almost $5 per player which is then followed by the lowest average per player with the 40+ range spending over 30% less per player than the top spenders, however both the . The purchase/player is extremely low with the number 1 purchaser buying 5 items and the player purchase count dropping to 3 before leaving the top 5 spenders. Comparing the total number of purchases (780) to the number of players (576) indicates that most players only purchase a single item.
+
+## Recommendations
+
+Attract more non-male players, the data indicates they spend more.
+Make multiple purchases more attractive, currently most players only buy a single item. 
+
 ## Code function
-----
 First the notebook imports Pandas, assigns the file to be loaded to a variable and then calls that variable to load it into a data frame. It then reads the number of unique screen names to determine the total number of players that have purchased items in game. Next the notebook counts unique item ids to determine the number of different items, before using the total number of items purchased and the total amount spent on all purchases to determine the average amount spent on each item. These numbers are then outputted in a data frame.
 
 To determine the gender demogrpahics the notebook splits the data into 3 seperate sections deliniated by the genders provided by users. It then counts the number of unique screen names in these sections and adds them to a data frame, this data frame also includes the percentage of total players each gender represents which is calculated using the player total acquired in the previous section. The index of this data frame is then changed to the gender options and formatting is applied to the percentage column before the data frame is finally output.
@@ -18,6 +26,3 @@ To determine the most popular items the data is first grouped by the __Item ID__
 
 To determine the most profitable items the non-formatted copy of the data from the previous section is called, this data has already been sorted by __Total Purchase Value__ and so all that is needed is formatting, column rearrangement and finally output.
 
-## Analysis
-___
-By analyzing this data we can determine a few interesting trends. The player base for this game skews overwhelmingly male and early 20s, however the non- male players tend to spend significantly more. The top spendrs in terms of age ranges are the 35-39 year olds reaching almost $5 per player which is then followed by the lowest average per player with the 40+ range spending over $1.50 less per player than the 35-39 year olds. The player base does not seem to be buying that much per player with the purchase count of the top player being only 5 items and the purchase count dropping to 3 before leaving the top 5 spenders. Comparing the total number of purchases (780) to the number of players (576) indicates that most players only purchase a single item.
